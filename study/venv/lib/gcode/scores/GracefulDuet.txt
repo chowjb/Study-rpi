@@ -1,0 +1,31 @@
+(SmoothDrawDualInfinitySymbolsTest)
+; Turn off any alarms
+$X
+
+; Gcode setup in mm and absolute
+G17 G21 G90 G94 G54
+G0 X240 Y180
+
+; Set X for 500 steps/mm so it moves fast
+$100=500
+
+; Set feedrate and linear move
+F15000 G1
+
+; Draw half circle
+X150 Y220
+X100 Y320
+X150 Y420
+X240 Y460
+
+; Draw line to other half circle
+X580 Y180
+
+; Draw half circle the other way
+X670 Y220
+X720 Y320
+X670 Y420
+X580 Y460
+
+; Line to first half circle
+X240 Y180

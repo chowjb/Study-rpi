@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "3c937fa8-d04d-4be9-b5a3-e0004990837e": {
+      "ProjectGuid": "3c937fa8-d04d-4be9-b5a3-e0004990837e",
+      "DisplayName": "Study_App",
+      "ColorIndex": 0
+    },
+    "7099ca72-ba7b-409a-abed-ad7d0f505188": {
+      "ProjectGuid": "7099ca72-ba7b-409a-abed-ad7d0f505188",
+      "DisplayName": "Study_Site",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}
