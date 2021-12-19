@@ -15,6 +15,6 @@ if __name__ == '__main__':
         PORT = 5555
         
     if constants.IS_RASPBERRY_PI:
-        app.run(host='0.0.0.0', port=5000)     # iPhone: http://study-rpi.local:5000
+        app.run(host='0.0.0.0', port=5000)      # iPhone: http://study-rpi.local:5000
     else:
         app.run(HOST, PORT, debug=False)        # Test it in Chrome.
