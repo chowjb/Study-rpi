@@ -1,0 +1,14 @@
+{
+    "python.testing.pytestArgs": [
+        "."
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.nosetestsEnabled": false,
+    "python.testing.pytestEnabled": false,
+    "python.testing.promptToConfigure": false,
+    //"python.analysis.extraPaths": ["/home/pi/bots/code/venv/lib"]
+    "python.pythonPath": "venv\\Scripts\\python.exe",
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": "active",
+    "git.ignoreLimitWarning": true
+}

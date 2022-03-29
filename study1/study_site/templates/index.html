@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+    <h1>Study-rpi</h1>
+    <p class="lead">Use this website to study the different ways of interacting with ambient fixtures</p>
+    <p><a href="http://flask.pocoo.org/" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Run single file</h2>
+        <p>
+            Press Run to run the gcode transport mechanism for a given number of cycles
+        </p>
+        <!-- <p><a class="btn btn-default" href="http://localhost:5555/run">Run</a></p> -->
+        <p><a class="btn btn-default" href="http://study-rpi.local:5000/run">Run</a></p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <h2>Run multiple files</h2>
+        <p>
+            Press Run to run two different gcode files for a given number of cycles
+        </p>
+        <!-- <p><a class="btn btn-default" href="http://localhost:5555/run">Run</a></p> -->
+        <p><a class="btn btn-default" href="http://study-rpi.local:5000/run_multiple">Run Multiple</a></p>
+    </div>
+</div>
+
+{% endblock %}

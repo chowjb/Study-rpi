@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+    <h1>Study-rpi</h1>
+    <p class="lead">Use this website to study the different ways of interacting with ambient fixtures</p>
+    <p><a href="http://flask.pocoo.org/" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Reset</h2>
+        <p>Press Reset to reset and home the ambient fixture before running it</p>
+        <!-- <p><a class="btn btn-default" href="http://localhost:5555/reset">Reset</a></p> -->
+        <p><a class="btn btn-default" href="http://study-rpi.local:5000/reset">Reset</a></p>
+    </div>
+</div>
+
+{% endblock %}
