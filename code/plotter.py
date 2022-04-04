@@ -3,8 +3,10 @@ import utilities.constants as constants
 #importlib.reload(grbl)
 
 class Plotter:
-    def __init__(self, transport):
+    def __init__(self, transport, capture_gcode):
         self.transport = transport
+        if capture_gcode:
+            self.transport.capture_gcode('C:\\temp\\plotting.gcode')
     
     def __enter__(self):
         return self
@@ -12,7 +14,7 @@ class Plotter:
     def __exit__(self, exc_type, exc_value, traceback):
         pass
     
-    def reset(self):
+    def reset(self, speed=4000, acceleration = 4000):
         # NEMA17 200 steps/rev, 2 microsteps, spool dia = 17.0 mm
         diameter = 17.0
         steps_per_rev = 200
@@ -34,11 +36,15 @@ class Plotter:
         # save this as the permanent home position (it in machine coordinates)
         self.transport.send_gcode('G28.1')
         # set for absolute position
+        self.transport.send_gcode('$130=450') # set X max travel
+        self.transport.send_gcode('$131=375') # set Y max travel
+        self.transport.send_gcode('$25=1000') # set the speed seeking the limit switches
         self.transport.send_gcode('G90')
+        self.transport.set_speed_accel('X', speed, acceleration)
+        self.transport.set_speed_accel('Y', speed, acceleration)
 
-    def plot(self, x, y, speed=2000, accel=2000):
-        self.transport.set_speed_accel('X', speed, accel)
-        self.transport.set_speed_accel('Y', speed, accel)
+    def plot(self, x, y):
+        self.transport.debug = False
         self.transport.move_to(x, y)
 
     # def plot_line(self, x, y, speed):
