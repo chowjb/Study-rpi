@@ -1,0 +1,81 @@
+**** Connected to COM6 @ 115200 baud ****
+[MSG:Grbl_ESP32 Ver 1.3a Date 20201212]
+[MSG:Compiled with ESP32 SDK:v3.2.3-14-gd3e562907]
+[MSG:Using machine:vplotter]
+[MSG:Axis count 6]
+[MSG:RMT Steps]
+[MSG:Init Motors]
+[MSG:X  Axis Standard Stepper Step:GPIO(15) Dir:GPIO(2) Disable:None Limits(-1150.000,0.000)]
+[MSG:Y  Axis Standard Stepper Step:GPIO(4) Dir:GPIO(5) Disable:None Limits(-1025.000,0.000)]
+[MSG:Z  Axis Standard Stepper Step:GPIO(16) Dir:GPIO(17) Disable:None Limits(-1115.000,0.000)]
+[MSG:A  Axis Standard Stepper Step:GPIO(18) Dir:GPIO(19) Disable:None Limits(-1085.000,0.000)]
+[MSG:B  Axis Standard Stepper Step:GPIO(26) Dir:GPIO(27) Disable:None Limits(-500.000,0.000)]
+[MSG:C  Axis Standard Stepper Step:GPIO(33) Dir:GPIO(12) Disable:None Limits(-500.000,0.000)]
+[MSG:VPlotter Kinematics Init]
+[MSG:No spindle]
+[MSG:Local access point GRBL_ESP started, 192.168.0.1]
+[MSG:Captive Portal Started]
+[MSG:HTTP Started]
+[MSG:TELNET Started 23]
+[MSG:X  Axis limit switch on pin GPIO(35)]
+[MSG:Y  Axis limit switch on pin GPIO(34)]
+[MSG:Z  Axis limit switch on pin GPIO(25)]
+[MSG:A  Axis limit switch on pin GPIO(39)]
+[MSG:B  Axis limit switch on pin GPIO(13)]
+[MSG:C  Axis limit switch on pin GPIO(36)]
+Grbl 1.3a ['$' for help]
+>>> $$
+[MSG:Check limits]
+[MSG:'$H'|'$X' to unlock]
+$0 = 3    (Step pulse time, microseconds)
+$1 = 255    (Step idle delay, milliseconds)
+$2 = 0    (Step pulse invert, mask)
+$3 = 42    (Step direction invert, mask)
+$4 = 0    (Invert step enable pin, boolean)
+$5 = 0    (Invert limit pins, boolean)
+$6 = 0    (Invert probe pin, boolean)
+$10 = 1    (Status report options, mask)
+$11 = 0.010    (Junction deviation, millimeters)
+$12 = 0.002    (Arc tolerance, millimeters)
+$13 = 0    (Report in inches, boolean)
+$20 = 0    (Soft limits enable, boolean)
+$21 = 1    (Hard limits enable, boolean)
+$22 = 1    (Homing cycle enable, boolean)
+$23 = 0    (Homing direction invert, mask)
+$24 = 500.000    (Homing locate feed rate, mm/min)
+$25 = 2000.000    (Homing search seek rate, mm/min)
+$26 = 250.000    (Homing switch debounce delay, milliseconds)
+$27 = 30.000    (Homing switch pull-off distance, millimeters)
+$30 = 1000.000    (Maximum spindle speed, RPM)
+$31 = 0.000    (Minimum spindle speed, RPM)
+$32 = 1    (Laser-mode enable, boolean)
+$N1=
+$N0=
+$100 = 21.221    (X-axis travel resolution, step/mm)
+$101 = 21.221    (Y-axis travel resolution, step/mm)
+$102 = 25.593    (Z-axis travel resolution, step/mm)
+$103 = 25.593   
+$104 = 4.954   
+$105 = 4.954   
+$110 = 50000.000    (X-axis maximum rate, mm/min)
+$111 = 50000.000    (Y-axis maximum rate, mm/min)
+$112 = 50000.000    (Z-axis maximum rate, mm/min)
+$113 = 50000.000   
+$114 = 50000.000   
+$115 = 50000.000   
+$120 = 100.000    (X-axis acceleration, mm/sec^2)
+$121 = 100.000    (Y-axis acceleration, mm/sec^2)
+$122 = 100.000    (Z-axis acceleration, mm/sec^2)
+$123 = 100.000   
+$124 = 100.000   
+$125 = 100.000   
+$130 = 1150.000    (X-axis maximum travel, millimeters)
+$131 = 1025.000    (Y-axis maximum travel, millimeters)
+$132 = 1115.000    (Z-axis maximum travel, millimeters)
+$133 = 1085.000   
+$134 = 500.000   
+$135 = 500.000   
+ok
+>>> $G
+[GC:G0 G54 G17 G21 G90 G94 M5 M9 T0 F0 S0]
+ok

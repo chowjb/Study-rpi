@@ -1,8 +1,10 @@
 {
 	"folders": [
 		{
+			"path": "testit"
+		},
+		{
 			"path": "."
 		}
-	],
-	"settings": {}
+	]
 }

@@ -3,7 +3,7 @@ import utilities.constants as constants
 #importlib.reload(grbl)
 
 class Plotter:
-    def __init__(self, transport, capture_gcode):
+    def __init__(self, transport, capture_gcode=False):
         self.transport = transport
         if capture_gcode:
             self.transport.capture_gcode('C:\\temp\\plotting.gcode')
@@ -23,12 +23,12 @@ class Plotter:
         #print(f'Steps per mm: {steps_per_mm}')
         
         self.transport.reset()
-        self.transport.set_speed_accel('X', 2000, 2000)
-        self.transport.set_speed_accel('Y', 2000, 2000)
+        self.transport.set_speed_accel('X', speed, acceleration)
+        self.transport.set_speed_accel('Y', speed, acceleration)
         self.transport.send_gcode(f'$100={steps_per_mm}')
         self.transport.send_gcode(f'$101={steps_per_mm}')
         self.transport.send_gcode('$23=1')  # reverse direction for X for home
-        self.transport.send_gcode('$3=2')   # reverse direction of stepper for Y
+        self.transport.send_gcode('$3=3')   # reverse direction of stepper for Y
         self.transport.send_gcode('$27=10') # short pull-off of home
         self.transport.home()
         self.transport.send_gcode('G91 Y-350')
@@ -40,12 +40,10 @@ class Plotter:
         self.transport.send_gcode('$131=375') # set Y max travel
         self.transport.send_gcode('$25=1000') # set the speed seeking the limit switches
         self.transport.send_gcode('G90')
-        self.transport.set_speed_accel('X', speed, acceleration)
-        self.transport.set_speed_accel('Y', speed, acceleration)
 
-    def plot(self, x, y):
+    def plot_circle(self, x_center, y_center):
         self.transport.debug = False
-        self.transport.move_to(x, y)
+        self.transport.send_gcode(f'X{x_center} Y{y_center}')
 
     # def plot_line(self, x, y, speed):
     #     self.grbl.set_speed(speed)
