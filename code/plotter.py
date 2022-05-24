@@ -31,8 +31,8 @@ class Plotter:
         self.transport.send_gcode('$3=3')   # reverse direction of stepper for Y
         self.transport.send_gcode('$27=10') # short pull-off of home
         self.transport.home()
-        self.transport.send_gcode('G91 Y-350')
-        self.transport.send_gcode('G10 L20 P1 X0 Y0 Z0')
+        self.transport.send_gcode('G91 Y-300')  # move to start of plot position
+        self.transport.send_gcode('G10 L20 P1 X0 Y0 Z0') # set origin to 0,0,0
         # save this as the permanent home position (it in machine coordinates)
         self.transport.send_gcode('G28.1')
         # set for absolute position
